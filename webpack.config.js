@@ -1,12 +1,12 @@
 /* eslint-disable linebreak-style */
+/* "import/no-unresolved": "off" */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
   entry: {
-    bundle: './src/index.js',
-    path: path.resolve(__dirname, './src/index.js'),
+    bundle: path.resolve(__dirname, './src/index.js'),
   },
   devServer: {
     static: './dist',

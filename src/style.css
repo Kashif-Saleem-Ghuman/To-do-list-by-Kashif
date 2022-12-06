@@ -25,6 +25,7 @@ body {
 h1 {
   color: rgb(77, 77, 77);
   font-family: 'Times New Roman', Times, serif;
+  font-size: 4vw;
 }
 
 .text-wrapper {
@@ -46,7 +47,7 @@ h1 {
 
 .placeholder {
   border: none;
-  font-size: x-large;
+  font-size: 2vw;
 }
 
 ::placeholder {
@@ -78,5 +79,5 @@ h1 {
 
 .label {
   font-family: 'Times New Roman', Times, serif;
-  font-size: x-large;
+  font-size: 2vw;
 }
