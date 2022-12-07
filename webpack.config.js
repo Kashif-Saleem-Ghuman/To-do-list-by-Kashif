@@ -1,19 +1,19 @@
 /* eslint-disable linebreak-style */
 /* "import/no-unresolved": "off" */
-const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 module.exports = {
   mode: 'development',
   entry: {
-    bundle: path.resolve(__dirname, './src/index.js'),
+    index: path.resolve(__dirname, './src/index.js'),
   },
   devServer: {
     static: './dist',
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'src/template.html',
+      template: './src/template.html',
     }),
   ],
   output: {

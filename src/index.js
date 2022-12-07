@@ -28,9 +28,13 @@ const arr = [
 
 // eslint-disable-next-line no-return-assign
 arr.map((card) => document.getElementById('text-content').innerHTML
-  += `<section class="checkbox-label-wrapper"><div class="description"><input type="checkbox" id="checkbox" name="checkbox" value="checkbox">
-  <label for="checkbox" id="checkbox-1" class="label">${card.description}</label>
-  </div><span class="dots">&#8942</span></section>`);
+  += `<section class="checkbox-label-wrapper">
+        <div class="description">
+          <input type="checkbox" id="checkbox" name="checkbox" value="checkbox">
+          <label for="checkbox" id="checkbox-1" class="label">${card.description}</label>
+        </div>
+        <span class="dots">&#8942</span>
+       </section>`);
 
 // function component() {
 //   const element = document.createElement('div');
