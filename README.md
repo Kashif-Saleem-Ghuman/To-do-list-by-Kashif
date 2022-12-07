@@ -1,36 +1,5 @@
 <a name="readme-top"></a>
 
-<!--
-HOW TO USE:
-This is an example of how you may give instrsuctions on setting up your project locally.
-
-Modify this file to match your project and remove sections that don't apply.
-=======
-
-## Awesome books Project
-
-This project is about a basic website that allows users to add/remove books from a list. We will achieve that by using JavaScript objects and arrays. 
-We will also dynamically modify the DOM and add basic events.
-
-
-
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-After you're finished please remove all the comments and instructions!
--->
-
 <div align="center">
 
   <img src="/images/murple_logo.png" alt="logo" width="140"  height="auto" />
@@ -39,8 +8,6 @@ After you're finished please remove all the comments and instructions!
   <h3><b>Microverse README Template</b></h3>
 
 </div>
-
-<!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
 
@@ -54,8 +21,6 @@ After you're finished please remove all the comments and instructions!
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
-
-<!-- PROJECT DESCRIPTION -->
 
 # 📖 Awesome Book<a name="about-project"></a>
 
@@ -79,7 +44,6 @@ Store your data history in the browser's local storage.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
@@ -87,8 +51,6 @@ Store your data history in the browser's local storage.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-<!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -136,8 +98,6 @@ Clone this repository to your desired folder:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- Author -->
-
 ## 👤**Authors** <a name="authors"></a>
 <h4>Kashif Saleem</h4>
 
@@ -148,15 +108,11 @@ Clone this repository to your desired folder:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FUTURE FEATURES -->
-
 ## 🔭 Future Features <a name="future-features"></a>
 
 - Implement some UX improvements: To dynamically add and remove tasks.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
 
@@ -166,15 +122,11 @@ Feel free to check the [issues page](https://github.com/Kashif-Saleem-Ghuman/To-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- SUPPORT -->
-
 ## ⭐️ Show your support <a name="support"></a>
 
 Give a ⭐️ if you like this project!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
@@ -185,9 +137,6 @@ Give a ⭐️ if you like this project!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-<!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
