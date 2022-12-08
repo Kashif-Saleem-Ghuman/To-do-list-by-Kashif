@@ -7,6 +7,8 @@
 
 .container {
   background-color: white;
+  /* stylelint-disable-next-line color-hex-length */
+  box-shadow: 5px 10px 10px #888888;
 }
 
 body {
@@ -93,7 +95,6 @@ h1 {
 
 .settings {
   cursor: pointer;
-  /* position: relative; */
 }
 
 .settings li {
@@ -124,7 +125,7 @@ h1 {
   cursor: pointer;
 }
 
-.task-menu li:last-child{
+.task-menu li:last-child {
   margin-bottom: 0;
 }
 
@@ -134,4 +135,18 @@ h1 {
 
 .task-menu li i {
   padding-right: 8px;
+}
+
+.button-clear {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(250, 250, 250);
+  border: none;
+  width: 100%;
+  height: 8vw;
+  align-items: center;
+  font-size: 3vw;
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(95, 95, 95);
+  cursor: pointer;
 }
