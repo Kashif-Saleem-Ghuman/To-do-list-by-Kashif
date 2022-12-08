@@ -2,13 +2,15 @@ import './style.css';
 import showTodo from './modules/UI.js';
 import updateStatus from './modules/updateStatus.js';
 import deleteTask from './modules/delete.js';
+import clearBtn from './modules/clear.js';
 
+window.clearBtn = clearBtn;
 const taskInput = document.querySelector('.placeholder');
 let editId;
 let isEditTask = false;
 
 // geting localstorage todo-list
-window.todos = JSON.parse(localStorage.getItem('todo-list'));
+window.window.todos = JSON.parse(localStorage.getItem('todo-list'));
 
 // to show menu
 window.showMenu = (selectedTask) => {
@@ -32,8 +34,6 @@ window.editTask = (taskId, taskName) => {
 
 showTodo(window.todos);
 window.updateStatus = updateStatus;
-// window.editTask = editTask;
-// window.showMenu = showMenu;
 window.deleteTask = deleteTask;
 
 taskInput.addEventListener('keyup', (e) => {
