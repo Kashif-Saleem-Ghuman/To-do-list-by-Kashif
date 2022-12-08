@@ -1,13 +1,7 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable import/prefer-default-export */
-/* eslint-disable linebreak-style */
-/* eslint-disable prefer-const */
-/* eslint-disable linebreak-style */
-// geting localstorage todo-list
 const taskBox = document.getElementById('text-content');
 
 // displaying on UI
-export const showTodo = (todos) => {
+const showTodo = (todos) => {
   let li = '';
   if (todos) {
     todos.forEach((todo, id) => {
@@ -30,3 +24,5 @@ export const showTodo = (todos) => {
     taskBox.innerHTML = li;
   }
 };
+
+export default showTodo;

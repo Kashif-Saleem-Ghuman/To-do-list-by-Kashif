@@ -1,25 +1,16 @@
-/* eslint-disable linebreak-style */
-// eslint-disable-next-line linebreak-style
-/* eslint-disable no-undef */
-/* eslint-disable linebreak-style */
-/* eslint-disable no-unused-vars */
-/* eslint-disable linebreak-style */
-/* "import/no-unresolved": "off" */
-
-// import _ from 'lodash';
 import './style.css';
-import html from './template.html';
-import { showTodo } from './modules/UI.js';
-import { updateStatus } from './modules/updateStatus.js';
-import { deleteTask } from './modules/delete.js';
+import showTodo from './modules/UI.js';
+import updateStatus from './modules/updateStatus.js';
+import deleteTask from './modules/delete.js';
 import clearBtn from './modules/clear.js';
 
+window.clearBtn = clearBtn;
 const taskInput = document.querySelector('.placeholder');
 let editId;
 let isEditTask = false;
 
 // geting localstorage todo-list
-window.todos = JSON.parse(localStorage.getItem('todo-list'));
+window.window.todos = JSON.parse(localStorage.getItem('todo-list'));
 
 // to show menu
 window.showMenu = (selectedTask) => {
@@ -41,27 +32,25 @@ window.editTask = (taskId, taskName) => {
   taskInput.value = taskName;
 };
 
-showTodo(todos);
+showTodo(window.window.todos);
 window.updateStatus = updateStatus;
-// window.editTask = editTask;
-// window.showMenu = showMenu;
 window.deleteTask = deleteTask;
 
 taskInput.addEventListener('keyup', (e) => {
   const userTask = taskInput.value.trim();
   if (e.key === 'Enter' && userTask) {
     if (!isEditTask) { //  if isEdidTask isn't true
-      todos = !todos ? [] : todos;
+      window.todos = !window.todos ? [] : window.todos;
       const taskInfo = { name: userTask, status: 'pending' };
-      todos.push(taskInfo);
+      window.todos.push(taskInfo);
     } else {
       isEditTask = false;
-      todos[editId].name = userTask;
+      window.todos[editId].name = userTask;
     }
 
     taskInput.value = ''; // emty input value
 
-    localStorage.setItem('todo-list', JSON.stringify(todos));
-    showTodo(todos);
+    localStorage.setItem('todo-list', JSON.stringify(window.todos));
+    showTodo(window.todos);
   }
 });
