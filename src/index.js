@@ -32,7 +32,7 @@ window.editTask = (taskId, taskName) => {
   taskInput.value = taskName;
 };
 
-showTodo(window.window.todos);
+showTodo(window.todos);
 window.updateStatus = updateStatus;
 window.deleteTask = deleteTask;
 
