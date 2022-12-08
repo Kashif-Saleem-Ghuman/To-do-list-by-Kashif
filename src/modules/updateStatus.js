@@ -15,4 +15,3 @@ const updateStatus = (selectedTask) => {
 };
 
 export default updateStatus;
-
