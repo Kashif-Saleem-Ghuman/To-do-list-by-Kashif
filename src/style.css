@@ -81,3 +81,57 @@ h1 {
   font-family: 'Times New Roman', Times, serif;
   font-size: 2vw;
 }
+
+.description label.checked {
+  text-decoration: line-through;
+}
+
+.dots {
+  font-size: x-large;
+  color: rgb(122, 122, 122);
+}
+
+.settings {
+  cursor: pointer;
+  /* position: relative; */
+}
+
+.settings li {
+  list-style: none;
+}
+
+.task-menu {
+  z-index: 2;
+  right: 45px;
+  padding: 5px 0;
+  background: #fff;
+  position: absolute;
+  border-radius: 4px;
+  transform: scale(0);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+  transform-origin: top right;
+  transition: transform 0.2s ease;
+}
+
+.settings .task-menu.show {
+  transform: scale(1);
+}
+
+.task-menu li {
+  height: 20px;
+  font-size: 15px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.task-menu li:last-child{
+  margin-bottom: 0;
+}
+
+.task-menu li:hover {
+  background: #f5f5f5;
+}
+
+.task-menu li i {
+  padding-right: 8px;
+}
