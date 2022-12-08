@@ -1,54 +1,56 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable no-unused-vars */
-/* eslint-disable linebreak-style */
-/* "import/no-unresolved": "off" */
-
-// import _ from 'lodash';
 import './style.css';
-import html from './template.html';
-import Icon from './images/speaker-background.png';
+import showTodo from './modules/UI.js';
+import updateStatus from './modules/updateStatus.js';
+import deleteTask from './modules/delete.js';
 
-const arr = [
-  {
-    description: 'wash the dishes',
-    completed: 'true',
-    id: 1,
-  },
-  {
-    description: 'cook food',
-    completed: 'false',
-    id: 2,
-  },
-  {
-    description: 'do laundry',
-    completed: 'false',
-    id: 3,
-  },
-];
+const taskInput = document.querySelector('.placeholder');
+let editId;
+let isEditTask = false;
 
-// eslint-disable-next-line no-return-assign
-arr.map((card) => document.getElementById('text-content').innerHTML
-  += `<section class="checkbox-label-wrapper">
-        <div class="description">
-          <input type="checkbox" id="checkbox" name="checkbox" value="checkbox">
-          <label for="checkbox" id="checkbox-1" class="label">${card.description}</label>
-        </div>
-        <span class="dots">&#8942</span>
-       </section>`);
+// geting localstorage todo-list
+window.todos = JSON.parse(localStorage.getItem('todo-list'));
 
-// function component() {
-//   const element = document.createElement('div');
+// to show menu
+window.showMenu = (selectedTask) => {
+  // getting task menu div
+  const taskMenu = selectedTask.nextElementSibling;
+  taskMenu.classList.add('show');
+  document.addEventListener('click', (e) => {
+    // need to add condition for e.target.tagName != "I" ;
+    if (e.target !== selectedTask) {
+      taskMenu.classList.remove('show');
+    }
+  });
+};
 
-//   // Lodash, now imported by this script
-//   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-//   element.classList.add('hello');
-//   // Add the image to our existing div.
-//   const myIcon = new Image();
-//   myIcon.src = Icon;
+// to edit task
+window.editTask = (taskId, taskName) => {
+  editId = taskId;
+  isEditTask = true;
+  taskInput.value = taskName;
+};
 
-//   element.appendChild(myIcon);
+showTodo(window.todos);
+window.updateStatus = updateStatus;
+// window.editTask = editTask;
+// window.showMenu = showMenu;
+window.deleteTask = deleteTask;
 
-//   return element;
-// }
+taskInput.addEventListener('keyup', (e) => {
+  const userTask = taskInput.value.trim();
+  if (e.key === 'Enter' && userTask) {
+    if (!isEditTask) { //  if isEdidTask isn't true
+      window.todos = !window.todos ? [] : window.todos;
+      const taskInfo = { name: userTask, status: 'pending' };
+      window.todos.push(taskInfo);
+    } else {
+      isEditTask = false;
+      window.todos[editId].name = userTask;
+    }
 
-// document.body.appendChild(component());
+    taskInput.value = ''; // emty input value
+
+    localStorage.setItem('todo-list', JSON.stringify(window.todos));
+    showTodo(window.todos);
+  }
+});
