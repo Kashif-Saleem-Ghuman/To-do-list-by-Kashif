@@ -20,16 +20,15 @@
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [📝 License](#license)
 
-# 📖 Awesome Book<a name="about-project"></a>
+# 📖 Add to List app<a name="about-project"></a>
 
-**Awesome books** is a website that allows you to add books to a list and remove books from that list. It uses local storage to store and fetch data. 
+**Add to list app* is a web app that allows you to add tasks, edit, delete and mark tasks as completed. 
 
 Here are some features of the page:
 
-Add a book to your collection.
-Remove a book from your collection.
+Add a task to you to do list.
+Remove a task from your to do list.
 Store your data history in the browser's local storage.
 
 
@@ -47,7 +46,7 @@ Store your data history in the browser's local storage.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[Awesome Book](none)
+(none)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -61,6 +60,8 @@ Store your data history in the browser's local storage.
 - Now navigate to the repository folder using command prompt cd To-do-list-by-Kashif.
 
 - Make sure to intall linters using this link: https://github.com/microverseinc/linters-config.
+
+-Make sure to add project dependancies ( webpack)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -137,7 +138,6 @@ Give a ⭐️ if you like this project!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](https://github.com/Kashif-Saleem-Ghuman/To-do-list-by-Kashif/blob/main/LICENSE) licensed.
@@ -145,3 +145,4 @@ This project is [MIT](https://github.com/Kashif-Saleem-Ghuman/To-do-list-by-Kash
 _NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
