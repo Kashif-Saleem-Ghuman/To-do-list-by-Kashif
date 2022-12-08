@@ -12,6 +12,7 @@ import html from './template.html';
 import { showTodo } from './modules/UI.js';
 import { updateStatus } from './modules/updateStatus.js';
 import { deleteTask } from './modules/delete.js';
+import clearBtn from './modules/clear.js';
 
 const taskInput = document.querySelector('.placeholder');
 let editId;
