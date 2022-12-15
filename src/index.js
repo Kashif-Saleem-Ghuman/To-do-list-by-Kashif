@@ -9,8 +9,8 @@ const taskInput = document.querySelector('.placeholder');
 let editId;
 let isEditTask = false;
 
-// geting localstorage todo-list
-window.window.todos = JSON.parse(localStorage.getItem('todo-list'));
+// getting local storage todo-list
+window.todos = JSON.parse(localStorage.getItem('todo-list'));
 
 // to show menu
 window.showMenu = (selectedTask) => {
@@ -39,7 +39,7 @@ window.deleteTask = deleteTask;
 taskInput.addEventListener('keyup', (e) => {
   const userTask = taskInput.value.trim();
   if (e.key === 'Enter' && userTask) {
-    if (!isEditTask) { //  if isEdidTask isn't true
+    if (!isEditTask) { //  if isEditTask isn't true
       window.todos = !window.todos ? [] : window.todos;
       const taskInfo = { name: userTask, status: 'pending' };
       window.todos.push(taskInfo);
@@ -48,9 +48,11 @@ taskInput.addEventListener('keyup', (e) => {
       window.todos[editId].name = userTask;
     }
 
-    taskInput.value = ''; // emty input value
+    taskInput.value = ''; // empty input value
 
     localStorage.setItem('todo-list', JSON.stringify(window.todos));
     showTodo(window.todos);
   }
 });
+
+module.export = window.todos;
