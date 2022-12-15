@@ -1,3 +1,8 @@
+/**
+ * @jest-environment jsdom
+ */
+export const taskBox = document.getElementById('text-content');
+
 export const todos = [];
 
 export const addTask = (task) => {
