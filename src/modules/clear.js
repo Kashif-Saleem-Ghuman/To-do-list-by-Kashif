@@ -8,4 +8,5 @@ clearBtn.addEventListener('click', () => {
   completedItems.forEach((todo) => deleteTask(window.todos.indexOf(todo)));
   showTodo(window.todos);
 });
+
 export default clearBtn;
