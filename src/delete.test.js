@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 import {
-  todos, addTask, deleteTask, toDOList, editTask, updateStatus,
+  todos, addTask, deleteTask, toDOList, editTask, updateStatus, clearCompleted,
 } from './todoFunc.js';
 
 describe('Add and Remove functions testing', () => {
@@ -54,5 +54,9 @@ describe('function for edit, updating status, clear all completed', () => {
     updateStatus(2, 'completed');
     expect(toDOList).toEqual([{ id: 0, name: 'washing clothes', status: 'pending' }, { id: 1, name: 'dry clothes', status: 'pending' },
       { id: 2, name: 'hurray', status: 'completed' }]);
+  });
+  test('clearCompleted function should remove all tasks marked completed', () => {
+    clearCompleted();
+    expect(toDOList).toEqual([{ id: 0, name: 'washing clothes', status: 'pending' }, { id: 1, name: 'dry clothes', status: 'pending' }]);
   });
 });

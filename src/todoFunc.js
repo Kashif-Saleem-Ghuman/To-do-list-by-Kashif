@@ -43,3 +43,14 @@ export const updateStatus = (taskid, newStatus) => {
   });
   return toDOList;
 };
+
+// Clear all completed
+
+export const clearCompleted = () => {
+  toDOList.forEach((index) => {
+    if (index.status === 'completed') {
+      toDOList.splice(index.id, 1);
+    }
+  });
+  return toDOList;
+};
